@@ -10,10 +10,10 @@
 
 <!-- The head should contain an appropriate title for your site -->
 <head>
-    <title>Module 4 - Labo</title>
+    <title>Lab 4 - Hair Salon</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -22,229 +22,152 @@
 
     <!-- Your own additional style sheet -->
     <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <title> NATS Hair Salon </title>
 </head>
 
 
 <body>
 
-    <!-- Medium size container, padding 3, margins 3, background dark, text is white -->
-    <!-- Should show the name of your company with an image or logo -->
-    <!-- Bootstrap has its own font for H1, H2, p, etc.  -->
-    <!-- Look in BS4 Typography https://www.w3schools.com/bootstrap4/bootstrap_typography.asp -->
-    <!-- Use your own CSS file to change those fonts if they do not correspond to your company's look -->
-    <div class="container-md p-3 my-3 border bg-dark text-white">
-        <h1>Welcome to Nice Scissors</h1>
-        <p>We'll take care of your hair!</p>
-    </div>
-
-    <!-- Bootstrap contains a grid system you can explore https://www.w3schools.com/bootstrap4/bootstrap_grid_system.asp -->
-    <!-- It can be useful for placement of information -->
-    <div class="row p-3">
-        <div class="col-sm-3 pl-5">Service</div>
-        <div class="col-sm-3">Calendar</div>
-        <div class="col-sm-3">Payment</div>
-        <div class="col-sm-3">Where to find us</div>
-    </div>
-
-    <!-- When you have messages to tell, remember that center align is not always the best choice -->
-    <div class="container-md p-3 my-3 border bg-light text-success">
-        <h3>Let us tell you about our expertise</h3>
-        <p>We can <mark>cut hair</mark></p>
-        <p class="text-center" >Align wheels</p>
-        <p class="text-uppercase">Write in uppercase</p>
-        <p class="text-center text-uppercase" >centered and uppercase</p>
-    </div>
-
-
-    <!-- Bootstrap has different types of tables https://www.w3schools.com/bootstrap4/bootstrap_tables.asp -->
-    <!-- Might be (or not) useful to show some information to the user -->
-    <div class="container">
-        <h2>Service description</h2>
-        <p>Here is a list of services offered</p>            
-        <table class="table table-primary table-hover">
-            <thead>
-            <tr>
-                <th>Service</th>
-                <th>Description</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>Haircut</td>
-                <td>Bla bla</td>
-            </tr>
-            <tr>
-                <td>Drying</td>
-                <td>Bla bla</td>
-            </tr>
-            <tr>
-                <td>Coloring</td>
-                <td>Bla bla</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-
-
-    <!-- Bootstrap has components for alerts: https://www.w3schools.com/bootstrap4/bootstrap_alerts.asp  -->
-    <!-- These can be useful for making sure someone reads something before continuing -->
-    <div class="container">
-        <h2>Alert</h2>
-        <p>We have something important to say</p>
-        <div class="alert alert-danger alert-dismissible">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
-            <strong>Please read! </strong>You must read.
-        </div>
-    </div>
-
-    <!-- You'll certainly need buttons at some point in your site -->
-    <!-- https://www.w3schools.com/bootstrap4/bootstrap_buttons.asp -->
-    <!-- Remember how we talked about choosing a hue and changing the saturation for active/inactive -->
-    <!-- This idea is already part of the components in Bootstrap -->
-    <div class="container">
-        <h2>Button States</h2>
-        <button type="button" class="btn btn-warning">Primary Button</button>
-        <button type="button" class="btn btn-warning active">Active Primary</button>
-        <button type="button" class="btn btn-warning" disabled>Disabled Primary</button>
-    </div>
-
-
-    <!-- Including a modal https://www.w3schools.com/bootstrap4/bootstrap_modal.asp -->
-    <!-- Modals are useful for additional information or questions -->
-    <!-- Here the modal is used for a little survey -->
-    <div class="container">
-        <h2>Modal Example</h2>
-        <!-- Trigger the modal with a button -->
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#mySurvey">Open Survey</button>
-          
-        <!-- Modal -->
-        <div class="modal fade" id="mySurvey" role="dialog">
-            <div class="modal-dialog">  
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <div class="container">
-                        <h2>How did you hear about us?</h2>
-                        <p>Tell us:</p>
-                        <form>
-                          <div class="checkbox">
-                            <label><input type="checkbox" value="">Option 1</label>
-                          </div>
-                          <div class="checkbox">
-                            <label><input type="checkbox" value="">Option 2</label>
-                          </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>     
-        </div>
-        </div>    
-    </div>
-
-    <!-- Presenting the staff with cards: https://www.w3schools.com/bootstrap4/bootstrap_cards.asp -->
-    <!-- Card columns allows multiple cards next to each other -->
-    <!-- The first card's button doesn't go anywhere, it could be a modal --> 
-    <!-- My second card limits the information seen and uses collapsible to show more -->
-    <div class="container p-3">
-        <h2>Meet our hairdressers</h2>
-        <div class="card-columns">
-            <div class="card bg-warning" style="width:200px">
-                <img class="card-img-top" src="images/Jule.jpg" alt="Card image" style="width:100%">
-                <div class="card-body">
-                    <h4 class="card-title">Jules</h4>
-                    <p class="card-text">Jules has been cutting hair for 10 years.</p>
-                    <a href="#" class="btn btn-primary">See Profile</a>
-                </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white">
+        <div class="container-lg">
+            <div class="d-inline-flex header">
+                <h1 class="my-4 center align-self-center">NATS Hair Salon</h1>
             </div>
-            <div class="card bg-danger" style="width:200px">
-                <img class="card-img-top" src="images/Jule.jpg" alt="Card image" style="width:100%">
-                <div class="card-body">
-                    <h4 class="card-title">Jules</h4>
-                    <p class="card-text">The curly hair specialist</p>
-                    <!-- collapsible part -->
-                    <a href="#profile" class="btn btn-primary" data-toggle="collapse">See Profile</a>
-                    <div id="profile" class="collapse p-3">
-                        <p>Jules has been cutting hair for 10 years ... </p>
-                    </div>
-                </div>
+
+            <button type="button" class="btn btn-lg btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Book Now
+            </button>
+            <div class="navbar-text text-white-50">
+                <p class="m-0">1234 Cool Street</p>
+                <p class="m-0">Ottawa, ON K1N 7P2</p>
+                <a class="text-white-50" href="tel:1234567890">(123)-456-7890</a>
             </div>
         </div>
-    </div>
 
-
-    <!-- A different approach would be to make the whole staff information collapsible -->
-    <!-- Here a block button (taking the full width) opens/closes the collapsible -->
-    <!-- Here a single card is used, but card columns could be used -->
-    <div class="container">
-        <h2>More information</h2>
-        <a href="#mechanics" class="btn btn-primary btn-block" data-toggle="collapse">Meet our mechanics</a>
-        <div id="mechanics" class="collapse">
-            <div class="card bg-warning" style="width:200px">
-                <img class="card-img-top" src="images/Erwind.jpg" alt="Card image" style="width:100%">
-                <div class="card-body">
-                    <h4 class="card-title">Erwind</h4>
-                    <p class="card-text">Erwind knows all about bikes.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Collapsible with multiple items - accordion -->
-    <!-- https://www.w3schools.com/bootstrap4/bootstrap_collapse.asp -->
-    <!-- As we want to do a vertical navigation better suited for mobile design, an accordion pattern -->
-    <!-- could work well.  You can use other patterns too.  This is just an example. -->
-    <div class="container">
-        <div class="container-md p-3 my-3 border bg-warning text-white">
-            <h1>Erwind's and friends bike shop</h1>
-            <p>Bike fixing is our business</p>
-        </div>
-        <div id="accordion">
-            <div class="card">
-                <div class="card-header">
-                    <a class="card-link" data-toggle="collapse" href="#collapseService">Choose a service</a>
-                </div>
-                <div id="collapseService" class="collapse show" data-parent="#accordion">
-                    <div class="card-body">
-                        <p>Here is our list of services</p>
-                    </div>
-                </div>
-            <div class="card">
-                <div class="card-header">
-                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate">Choose a date</a>
-                </div>
-                <div id="collapseDate" class="collapse" data-parent="#accordion">
-                    <div class="card-body">
-                        <p>What date?</p>
-                        <!-- Bootstrap has various input components. Some examples are given here: -->
-                        <!-- Component shown here: https://v4-alpha.getbootstrap.com/components/forms/#textual-inputs -->
-                        <div class="form-group row">
-                            <label for="dateTimeInput" class="col-2 col-form-label">Date and time</label>
-                            <div class="col-10">
-                                <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="dateTimeInput">
+        <div class="container-lg">
+            <h2 class="my-4">Our Services.</h2>
+            <div class="accordion container-sm accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            <h5>Hair Cut</h5>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p class="my-4">
+                                Book your Haircut right now! 
+                            </p>
+                            <div class="justify-content-around">
+                                <h5 class="text-dark">$50 <span class="text-muted">/session</span></h5>
+                                <button type="button" class="my-4 btn btn-lg btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    Book Now
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo">Your info</a>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            <h5>Hair Colour</h5>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p class="my-4">
+                                Book an appointment now to change your current hair colour!
+                            </p>
+                            
+                            <div class="justify-content-around">
+                                <h5 class="text-dark">$70 <span class="text-muted">/session</span></h5>
+                                <button type="button" class="my-4 btn btn-lg btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    Book Now
+                                </button>
+                            </div>
+                        </div>                
+                    </div>
                 </div>
-                <div id="collapseClientInfo" class="collapse" data-parent="#accordion">
+               
+
+                    </div>
+                </div>
+            </div>
+            <h2 class="my-4">Meet our Stylists!</h2>
+            <div class="row container-sm justify-content-around">
+                <div class="card my-4 p-0" style="width: 18rem;">
+                    <img src="images/stewie.jpg" class="card-img-top" style="max-height: 170px; object-fit: cover;" alt="...">
+                    <h5 class="card-title mt-4 px-3 fw-bold fs-4">Stewie Griffin</h5>
+                    <span class="px-3 text-muted">Hair Stylist</span>
                     <div class="card-body">
-                        <p>Your information so we can contact you</p>
-                        <p>Form to enter name, email, phone</p>
+                        <p class="card-text">
+                            Stewie got his hair styling licence in the fall of 2021 and loves to style long hairs!
+                        </p>
+                    </div>
+                </div>
+                <div class="card my-4 p-0" style="width: 18rem;">
+                    <img src="images/bandb.jpg" class="card-img-top" style="max-height: 170px; object-fit: cover;" alt="...">
+                    <h5 class="card-title mt-4 px-3 fw-bold fs-4">Bevis and Butthead</h5>
+                    <span class="px-3 text-muted">Hair Stylists</span>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Bevis and Butthead comes in a pair of two who both loves to cut hair of all styles!
+                        </p>
+                    </div>
+                </div>
+                
+    
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title" id="exampleModalLabel">Book an appointment.</h2>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h4>Your information.</h4>
+                            <div class="p-2 row">
+                                <div class="col">
+                                    <label for="inputFirst" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="inputFirst">
+                                </div>
+                                <div class="col">
+                                    <label for="inputLast" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="inputLast">
+                                </div>
+                            </div>
+                            <div class="p-2">
+                                <label for="inputEmail" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp">
+                            </div>
+                            <div class="p-2">
+                                <label for="inputPhone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="inputPhone">
+                            </div>
+                            <h4 class="mt-4">Request an appointment.</h4>
+                            <div class="p-2">
+                                <label for="inputService" class="form-label">Select a service</label>
+                                <select id="inputService" class="form-select" aria-label="Default select example">
+                                    <option value="" selected>-- Select --</option>
+                                    <option value="1">Hair cut - $50</option>
+                                    <option value="2">Hair colour - $70</option>
+                                </select>
+                            </div>
+                            <div class="p-2">
+                                <label for="inputDate" class="form-label">Choose a date</label>
+                                <input aria-label="Select a date" type="datetime-local" class="form-control" id="inputDate">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Confirm</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-</body>
-</html>
+        <!-- here we input our javascript helper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+        </body>
+    </html>

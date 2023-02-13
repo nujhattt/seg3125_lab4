@@ -19,3 +19,12 @@ h6 {
         width: 100%;
     }
 }
+
+
+
+th.one, th.three {
+    width: 15%
+  }
+  th.two {
+    width: 70%; /* Not necessary, since only 70% width remains */
+  }
